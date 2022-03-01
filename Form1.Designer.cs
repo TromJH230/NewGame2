@@ -40,6 +40,7 @@ namespace NewGame1
             this.mapPanel = new System.Windows.Forms.Panel();
             this.mapText = new System.Windows.Forms.Label();
             this.inventoryPanel = new System.Windows.Forms.Panel();
+            this.craftingPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.inventoryText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.mapPanel.SuspendLayout();
@@ -109,12 +110,20 @@ namespace NewGame1
             // 
             // inventoryPanel
             // 
+            this.inventoryPanel.Controls.Add(this.craftingPanel);
             this.inventoryPanel.Controls.Add(this.inventoryText);
             this.inventoryPanel.Location = new System.Drawing.Point(776, 273);
             this.inventoryPanel.Name = "inventoryPanel";
             this.inventoryPanel.Size = new System.Drawing.Size(275, 164);
             this.inventoryPanel.TabIndex = 6;
             this.inventoryPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mapPanel_Paint);
+            // 
+            // craftingPanel
+            // 
+            this.craftingPanel.Location = new System.Drawing.Point(176, 4);
+            this.craftingPanel.Name = "craftingPanel";
+            this.craftingPanel.Size = new System.Drawing.Size(96, 100);
+            this.craftingPanel.TabIndex = 1;
             // 
             // inventoryText
             // 
@@ -129,7 +138,7 @@ namespace NewGame1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 745);
+            this.ClientSize = new System.Drawing.Size(1140, 745);
             this.Controls.Add(this.inventoryPanel);
             this.Controls.Add(this.mapPanel);
             this.Controls.Add(this.actionPanel);
@@ -164,6 +173,7 @@ namespace NewGame1
         private System.Windows.Forms.Panel inventoryPanel;
         private System.Windows.Forms.Label inventoryText;
         private System.Windows.Forms.Label roomView;
+        private System.Windows.Forms.FlowLayoutPanel craftingPanel;
     }
 }
 
