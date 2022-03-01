@@ -85,6 +85,10 @@ namespace NewGame1
                     current.removeContent(a.amount, a.item); //Removes collected item from room
 
                     {
+                        for (int i = 0; i < 10; i++)
+                        {
+
+                        }
                         string newMessage = MessageOut.Text;
                         string toReplace = a.amount + " " + a.item.itemName + "\n";
                         if (current.contents.Count == 0)
@@ -156,7 +160,13 @@ namespace NewGame1
                     current.cleanActions();
                     if (current.gm.furnace.isLit)
                     {
-                        current.gm.furnace.furnaceFuel -= 5;
+                        if (current.gm.furnace.furnaceFuel >= 5)
+                        {
+                            current.gm.furnace.furnaceFuel -= 5;
+                        } else
+                        {
+                            current.gm.furnace.isLit = false;
+                        }
                     }
                     updateForm(act.getRoom());
                 } //Move Room button pressed
@@ -180,6 +190,7 @@ namespace NewGame1
             current = r;
             player = current.gm.player;
             hidden = new List<Tuple<Button, Action>>();
+            updateRoomView();
 
             //MessageOut
             MessageOut.Text = "";

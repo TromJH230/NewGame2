@@ -124,5 +124,10 @@ namespace NewGame1
             canShow = findCanShow(item.id);
             return canShow;
         }
+
+        public void doAction(int i)
+        {
+
+        }
     }
 }

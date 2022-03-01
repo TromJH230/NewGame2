@@ -8,6 +8,9 @@ namespace NewGame1
 {
     public class Item
     {
+        public static readonly Item Wood = new Item("Wood");
+        public static readonly Item Cloth = new Item("Cloth");
+        public static readonly Item Gas = new Item("Gas");
         public bool isConsumable;
         public bool isCollectable;
         public bool isInteractable;
